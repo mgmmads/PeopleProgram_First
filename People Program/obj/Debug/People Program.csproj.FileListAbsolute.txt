@@ -1,0 +1,17 @@
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\bin\Debug\People Program.exe.config
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\bin\Debug\Database.mdf
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\bin\Debug\Database_log.ldf
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\bin\Debug\People Program.exe
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\bin\Debug\People Program.pdb
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\obj\Debug\People Program.csprojResolveAssemblyReference.cache
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\obj\Debug\MainWindow.g.cs
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\obj\Debug\App.g.cs
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\obj\Debug\People Program_Content.g.cs
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\obj\Debug\People Program_MarkupCompile.cache
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\obj\Debug\People Program_MarkupCompile.lref
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\obj\Debug\MainWindow.baml
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\obj\Debug\People Program.g.resources
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\obj\Debug\People_Program.Properties.Resources.resources
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\obj\Debug\People Program.csproj.GenerateResource.Cache
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\obj\Debug\People Program.exe
+c:\users\mads a\documents\visual studio 2015\Projects\People Program\People Program\obj\Debug\People Program.pdb
