@@ -15,9 +15,9 @@
     </Window.Background>
     <Grid>
         <StackPanel HorizontalAlignment="Center" Height="521" VerticalAlignment="Center" Width="200" Margin="10,10,802,59"/>
-        <Grid HorizontalAlignment="Center" Height="570" Margin="10,10,0,0" VerticalAlignment="Center" Width="992">
-            <Button x:Name="ClearPersonBtn" Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="50" Margin="80,160,0,0"/>
-            <Button x:Name="AddPersonBtn" Content="Add person" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="50" Margin="80,80,0,0"/>
+        <Grid HorizontalAlignment="Center" Height="570" Margin="48,20,-28,0" VerticalAlignment="Center" Width="992">
+            <Button x:Name="ClearPersonBtn" Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="50" Margin="80,160,0,0" Click="ClearPersonBtn_Click"/>
+            <Button x:Name="AddPersonBtn" Content="Add person" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="50" Margin="80,80,0,0" Click="AddPersonBtn_Click"/>
             <Button x:Name="ShowFirstPersonBtn" Content="First Person" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="50" Margin="80,240,0,0"/>
             <Button x:Name="ShowNextPersonBtn" Content="Next Person" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="50" Click="ShowNextPersonBtn_Click" Margin="80,320,0,0"/>
             <Button x:Name="ShowPreviousPersonBtn" Content="Previous Person" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="50" Margin="80,400,0,0"/>
@@ -29,7 +29,7 @@
             <Label x:Name="DateOfBirthLb" Content="Birth Date" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,200,0,0" Foreground="White"/>
             <Label x:Name="AddressLb" Content="Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,230,0,0" Foreground="White"/>
             <Label x:Name="CityLb" Content="City" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,260,0,0" Foreground="White"/>
-            <Label x:Name="CurrentCountryLb" Content="Country" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,290,0,0" Foreground="White"/>
+            <Label x:Name="CountryLb" Content="Country" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,290,0,0" Foreground="White"/>
             <Label x:Name="BirthCountryLb" Content="Birth country" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,320,0,0" Foreground="White"/>
             <TextBox x:Name="FirstNameTxb" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Margin="425,85,0,0"/>
             <TextBox x:Name="SecondNameTxb" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Margin="425,115,0,0"/>
@@ -42,6 +42,7 @@
             <Label x:Name="GenderLbMale" Content="Male" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="435,170,0,0" Foreground="White"/>
             <RadioButton x:Name="GenderRbtnFemale" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="480,175,0,0"/>
             <Label x:Name="GenderLbFemale" Content="Female" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="490,170,0,0" Foreground="White"/>
+            <TextBox x:Name="BirthDateTxb" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="dd-mm-yyyy" VerticalAlignment="Top" Width="80" Margin="425,205,0,0"/>
         </Grid>
 
     </Grid>

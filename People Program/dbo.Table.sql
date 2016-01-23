@@ -5,9 +5,9 @@
 	[SecondName] nvarchar NULL,
 	[LastName] nvarchar NOT NULL,
 	[Gender] int NOT NULL,
-	[DateOfBirth] Date NULL,
+	[DateOfBirth] Date NOT NULL,
 	[Address] nvarchar NOT NULL,
-	[CurrentCity] nvarchar NOT NULL,
-	[BirthCountry] nvarchar NULL,
-	[CurrentCountry] nvarchar NULL
-)
+	[City] nvarchar NOT NULL,
+	[CurrentCountry] nvarchar NOT NULL,
+	[BirthCountry] nvarchar NULL
+	)
