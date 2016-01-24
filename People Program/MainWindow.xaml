@@ -42,7 +42,7 @@
             <Label x:Name="GenderLbMale" Content="Male" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="435,170,0,0" Foreground="White"/>
             <RadioButton x:Name="GenderRbtnFemale" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="480,175,0,0"/>
             <Label x:Name="GenderLbFemale" Content="Female" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="490,170,0,0" Foreground="White"/>
-            <TextBox x:Name="BirthDateTxb" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="dd-mm-yyyy" VerticalAlignment="Top" Width="80" Margin="425,205,0,0"/>
+            <TextBox x:Name="BirthDateTxb" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="ddmmyyyy" VerticalAlignment="Top" Width="80" Margin="425,205,0,0"/>
         </Grid>
 
     </Grid>

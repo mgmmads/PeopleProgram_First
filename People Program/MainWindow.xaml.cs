@@ -27,41 +27,85 @@ namespace People_Program
 
         private void AddPersonBtn_Click(object sender, RoutedEventArgs e)
         {
-            string firstName = FirstNameTxb.Text;
-            string secondName = SecondNameTxb.Text = "";
-            string lastName = LastNameTxb.Text = "";
+            string missingInformation = "You are missing";
+
+            string firstName = "";
+            bool firstNameInput = true;
+            string lastName = "";
+            bool lastNameInput = true;
             bool gender = true;
-            if (GenderRbtnMale.IsChecked == true && GenderRbtnFemale.IsChecked == false)
+            bool genderInput = true;
+
+            if (firstName != "")
             {
-                gender = true;
+                firstName = FirstNameTxb.Text;
             }
-            else if (GenderRbtnMale.IsChecked == false && GenderRbtnFemale.IsChecked == true)
+            else
             {
-                gender = false;
+                firstNameInput = false;
+                missingInformation += ", first name";
             }
+
+            string secondName = SecondNameTxb.Text;
+
+            if (lastName != "")
+            {
+                lastName = LastNameTxb.Text;
+            }
+            else
+            {
+                lastNameInput = false;
+                missingInformation += ", last name";
+            }
+
+            if (GenderRbtnMale.IsChecked == false && GenderRbtnFemale.IsChecked == false
+            {
+                if (GenderRbtnMale.IsChecked == true && GenderRbtnFemale.IsChecked == false)
+                {
+                    gender = true;
+                }
+                else if (GenderRbtnMale.IsChecked == false && GenderRbtnFemale.IsChecked == true)
+                {
+                    gender = false;
+                }
+            }
+            else
+            {
+                genderInput = false;
+                missingInformation += ", gender";
+            }
+
             string birthDate = BirthDateTxb.Text;
             string address = AddressTxb.Text;
             string city = CityTxb.Text;
             string country = CountryTxb.Text;
             string birthCountry = BirthCountryTxb.Text;
 
-            Controller.CreateNewPerson(
-                firstName,secondName,lastName,
-                gender,birthDate,address,city,
-                country,birthCountry);
+            if (firstName != "" && lastName != "" &&
+                birthDate != "" && address != "" &&
+                city != "" && country != "")
+            {
+                Controller.CreateNewPerson(
+                    firstName, secondName, lastName,
+                    gender, birthDate, address, city,
+                    country, birthCountry);
+
+                ClearTextBoxes();
+                MessageBox.Show("New person added");
+            }
+            else if (firstName == "" && lastName == "" &&
+                birthDate == "" && address == "" &&
+                city == "" && country == "")
+            {
+
+            }
+
+
         }
 
         private void ClearPersonBtn_Click(object sender, RoutedEventArgs e)
         {
-            FirstNameTxb.Text = "";
-            SecondNameTxb.Text = "";
-            LastNameTxb.Text = "";
-            GenderRbtnFemale.IsChecked = false;
-            GenderRbtnMale.IsChecked = false;
-            AddressTxb.Text = "";
-            CityTxb.Text = "";
-            CountryTxb.Text = "";
-            BirthCountryTxb.Text = "";
+            ClearTextBoxes();
         }
         private void ShowFirstPersonBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -73,6 +117,18 @@ namespace People_Program
 
         }
 
+        private void ClearTextBoxes()
+        {
+            FirstNameTxb.Text = "";
+            SecondNameTxb.Text = "";
+            LastNameTxb.Text = "";
+            GenderRbtnFemale.IsChecked = false;
+            GenderRbtnMale.IsChecked = false;
+            AddressTxb.Text = "";
+            CityTxb.Text = "";
+            CountryTxb.Text = "";
+            BirthCountryTxb.Text = "";
+        }
 
     }
 }
