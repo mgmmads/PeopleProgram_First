@@ -20,7 +20,11 @@ namespace People_Program
             bool gender, string birthDate, string address, 
             string city, string country, string birthCountry)
         {
-            Person newPerson = new Person(firstName, secondName, lastName, gender, birthDate, address, city, country, birthCountry);
+            Person newPerson = new Person(
+                firstName, secondName, lastName, 
+                gender, birthDate, address, 
+                city, country, birthCountry);
+
             PersonList.Add(newPerson);
         }
     }
