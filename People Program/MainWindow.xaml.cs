@@ -47,7 +47,7 @@ namespace People_Program
             bool lastNameInput = true;
             bool gender = true;
             bool genderInput = true;
-            string birthDate = BirthDateTxb.Text;
+            string birthDate = "";
             bool birthDateInput = true;
             string address = "";
             bool addressInput = true;
@@ -97,7 +97,7 @@ namespace People_Program
                 missingInformation += "\nGender";
             }
 
-            if (BirthDateTxb.Text != "" || BirthDateTxb.Text != "ddmmyyyy")
+            if (BirthDatePicker.Text != "")
             {
                 birthDate = BirthDatePicker.Text;
             }
