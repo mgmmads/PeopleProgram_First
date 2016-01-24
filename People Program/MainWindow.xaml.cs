@@ -27,44 +27,66 @@ namespace People_Program
 
         private void AddPersonBtn_Click(object sender, RoutedEventArgs e)
         {
-            string missingInformation = "You are missing";
+            ////#########################
+            ////Testing DatePicker
 
+            //string BirthDate = BirthDatePicker.Text;
+            //TestPicker = BirthDatePicker;
+
+            ////#########################
+
+
+            //String to be printed if information is lacking
+            string missingInformation = "You are missing:";
+
+            //Temporary variables to hold information used
+            //in creating a person + validation booleans
             string firstName = "";
             bool firstNameInput = true;
             string lastName = "";
             bool lastNameInput = true;
             bool gender = true;
             bool genderInput = true;
+            string birthDate = BirthDateTxb.Text;
+            bool birthDateInput = true;
+            string address = "";
+            bool addressInput = true;
+            string city = "";
+            bool cityInput = true;
+            string country = "";
+            bool countryInput = true;
 
-            if (firstName != "")
+            //Checks the information input from GUI
+            //and returns FALSE if there's missing input
+            if (FirstNameTxb.Text != "")
             {
                 firstName = FirstNameTxb.Text;
             }
             else
             {
                 firstNameInput = false;
-                missingInformation += ", first name";
+                missingInformation += "\nFirst name";
             }
 
             string secondName = SecondNameTxb.Text;
 
-            if (lastName != "")
+            if (LastNameTxb.Text != "")
             {
                 lastName = LastNameTxb.Text;
             }
             else
             {
                 lastNameInput = false;
-                missingInformation += ", last name";
+                missingInformation += "\nLast name";
             }
 
-            if (GenderRbtnMale.IsChecked == false && GenderRbtnFemale.IsChecked == false
+            if (GenderRbtnMale.IsChecked == true || GenderRbtnFemale.IsChecked == true)
             {
-                if (GenderRbtnMale.IsChecked == true && GenderRbtnFemale.IsChecked == false)
+                if (GenderRbtnMale.IsChecked == true)
                 {
                     gender = true;
                 }
-                else if (GenderRbtnMale.IsChecked == false && GenderRbtnFemale.IsChecked == true)
+                else if (GenderRbtnFemale.IsChecked == true)
                 {
                     gender = false;
                 }
@@ -72,35 +94,70 @@ namespace People_Program
             else
             {
                 genderInput = false;
-                missingInformation += ", gender";
+                missingInformation += "\nGender";
             }
 
-            string birthDate = BirthDateTxb.Text;
-            string address = AddressTxb.Text;
-            string city = CityTxb.Text;
-            string country = CountryTxb.Text;
+            if (BirthDateTxb.Text != "" || BirthDateTxb.Text != "ddmmyyyy")
+            {
+                birthDate = BirthDatePicker.Text;
+            }
+            else
+            {
+                birthDateInput = false;
+                missingInformation += "\nBirth date";
+            }
+
+            if (AddressTxb.Text != "")
+            {
+                address = AddressTxb.Text;
+            }
+            else
+            {
+                addressInput = false;
+                missingInformation += "\nAddress";
+            }
+
+            if (CityTxb.Text != "")
+            {
+                city = CityTxb.Text;
+            }
+            else
+            {
+                cityInput = false;
+                missingInformation += "\nCity";
+            }
+
+            if (CountryTxb.Text != "")
+            {
+                country = CountryTxb.Text;
+            }
+            else
+            {
+                countryInput = false;
+                missingInformation += "\nCountry";
+            }
+
             string birthCountry = BirthCountryTxb.Text;
 
-            if (firstName != "" && lastName != "" &&
-                birthDate != "" && address != "" &&
-                city != "" && country != "")
+            //Validating whatever input from GUI to Person
+            //is sufficient or lacking.
+            if (firstNameInput == true && lastNameInput == true &&
+                genderInput == true && birthDateInput == true &&
+                addressInput == true && cityInput == true && countryInput == true)
             {
                 Controller.CreateNewPerson(
-                    firstName, secondName, lastName,
-                    gender, birthDate, address, city,
-                    country, birthCountry);
+                firstName, secondName, lastName,
+                gender, birthDate, address, city,
+                country, birthCountry);
 
                 ClearTextBoxes();
-                MessageBox.Show("New person added");
+                MessageBox.Show("New person created");
             }
-            else if (firstName == "" && lastName == "" &&
-                birthDate == "" && address == "" &&
-                city == "" && country == "")
+            else
             {
-
+                MessageBox.Show(missingInformation);
             }
-
-
+            
         }
 
         private void ClearPersonBtn_Click(object sender, RoutedEventArgs e)
